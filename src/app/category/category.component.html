@@ -1,0 +1,38 @@
+<p>category works!</p>
+
+<a [routerLink]="['/Category-add']" routerLinkActive="router-link-active" >
+  Add
+</a>
+<hr>
+<table class="table">
+  <thead>
+    <th>Ma danh muc</th>
+    <th>Ten danh muc</th>
+    <th>Chuc nang</th>
+  </thead>
+  <tbody *ngIf="total==0">
+    <tr>
+      <td colspan="2">
+        Khong co du lieu
+      </td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="total>0">
+    <tr *ngFor="let item of categories">
+      <td>
+        {{item.id}}
+      </td>
+      <td>
+        {{item.categoryName}}
+      </td>
+      <td>
+        <a>
+          Edit
+        </a>
+        <a>
+          Delete
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

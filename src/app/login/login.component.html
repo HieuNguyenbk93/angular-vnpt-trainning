@@ -1,0 +1,27 @@
+<p>login works component!</p>
+<p style="color: red;">
+  {{message}}
+</p>
+<table>
+  <tr>
+    <td>
+      Ten dang nhap
+    </td>
+    <td>
+      <input [(ngModel)]="username" type="text">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Mat khau
+    </td>
+    <td>
+      <input [(ngModel)]="password" type="text">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <button type="button" (click)="signIn()">Dang nhap</button>
+    </td>
+  </tr>
+</table>

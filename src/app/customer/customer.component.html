@@ -1,0 +1,40 @@
+<p>customer works!</p>
+<table>
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="CurrentCustomer.CustomerName" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+    </td>
+    <td>
+      <Button type="submit" (click)="submit()">Button</Button>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Code
+    </td>
+    <td>
+      <input type="text" [(ngModel)]="CurrentCustomer.CustomerCode">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Number
+    </td>
+    <td>
+      <input type="number" [(ngModel)]="CurrentCustomer.CustormerAmount">
+    </td>
+  </tr>
+</table>
+<hr>
+
+Name: {{CurrentCustomer.CustomerName}}
+Code: {{CurrentCustomer.CustomerCode}}
+Name: {{CurrentCustomer.CustormerAmount}}

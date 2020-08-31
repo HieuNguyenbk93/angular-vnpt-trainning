@@ -1,0 +1,16 @@
+<p>category-add works!</p>
+
+<a [routerLink]="['/Category']" routerLinkActive="router-link-active">
+  Ve lai danh sach
+</a>
+
+<form [formGroup]="model.formGroup" (ngSubmit)="submitData()">
+  <div class="form-gourp">
+    <label>Ten danh muc</label>
+    <input type="text" [(ngModel)]="model.categoryName" formControlName="categoryName"/>
+    <p class="text-mute" [hidden]="!(model.formGroup.controls['categoryName'].hasError('required'))">
+      Vui long nhap ten danh muc
+    </p>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!(model.formGroup.valid)">Luu</button>
+</form>
